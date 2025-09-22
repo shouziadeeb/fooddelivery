@@ -30,11 +30,8 @@ const insertDefaultData = async () => {
   }
 };
 insertDefaultData();
-app.get("/", (req, res) => {
-  res.send({ staus: 200 });
-});
-// app.use("/api/auth", authRoutes); // ✅ Auth routes
-// Food routes (keep existing ones)
+
+
 
 // Routes
 app.get("/api/food", async (req, res) => {
