@@ -30,9 +30,9 @@ const insertDefaultData = async () => {
   }
 };
 insertDefaultData();
-console.log("====================================");
-console.log(authRoutes);
-console.log("====================================");
+app.get("/", (req, res) => {
+  res.send({ staus: 200 });
+});
 // app.use("/api/auth", authRoutes); // ✅ Auth routes
 // Food routes (keep existing ones)
 
