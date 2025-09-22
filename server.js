@@ -8,7 +8,7 @@ import { foodData } from "./data.js";
 dotenv.config();
 const app = express();
 
-app.use(cors());
+app.use(cors({ origin: "*" }));
 app.use(express.json());
 // ✅ Auth routes
 
@@ -30,8 +30,6 @@ const insertDefaultData = async () => {
   }
 };
 insertDefaultData();
-
-
 
 // Routes
 app.get("/api/food", async (req, res) => {
